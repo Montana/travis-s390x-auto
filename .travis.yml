@@ -7,4 +7,4 @@ jobs:
   include:
     - stage: Build for s390x
       arch: s390x
-      script: chmod +x ./build.sh; ./build.sh
+      script: chmod u+x ./build.sh; ./build.sh
