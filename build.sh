@@ -7,6 +7,7 @@ rm -f ./Dockerfile
 cp ../Dockerfile.s390x ./Dockerfile
 docker pull quay.io/montana/montana-s390x
 docker build -t quay.io/montana/montana-s390x .
-docker login quay.io -u "$ROBOT_USER" -p "$ROBOT_TOKEN"
+echo "$QUAY_BOT_PASSWORD" | docker login -u "$QUAY_BOT_USERNAME" --password-stdin quay.io
+docker push quay.io/montana/montana-s390x
 docker images
 docker push quay.io/montana/montana-s390x
