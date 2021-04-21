@@ -12,7 +12,7 @@ RUN bundle exec rake assets:precompile GITHUB_OAUTH_TOKEN=$GITHUB_OAUTH_TOKEN
 RUN tar -cjf public.tar.bz2 public
 
 FROM s390x/ruby:2.4.2
-LABEL maintainer montana@linux.c.om
+LABEL maintainer montana@linux.com
 WORKDIR /usr/src/app
 
 ENV TRAVIS_BUILD_DUMP_BACKTRACE true
