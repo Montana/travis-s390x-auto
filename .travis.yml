@@ -1,0 +1,10 @@
+os: linux
+dist: bionic
+
+services: docker
+
+jobs:
+  include:
+    - stage: Build for s390x
+      arch: s390x
+      script: chmod +x ./build.sh; ./build.sh
