@@ -5,6 +5,6 @@ services: docker
 
 jobs:
   include:
-    - stage: Build for s390x
+    - stage: Travis CI s390x Build for IBM Z Day using Quay
       arch: s390x
       script: chmod u+x ./build.sh; ./build.sh
