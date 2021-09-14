@@ -24,3 +24,5 @@ COPY --from=builder /usr/local/bundle/config /usr/local/bundle/config
 HEALTHCHECK --interval=5s CMD script/healthcheck
 EXPOSE 4000/tcp
 CMD ["script/server"]
+
+# IBM Z Day 2021
