@@ -3,7 +3,7 @@ WORKDIR /usr/src/app
 
 ARG GITHUB_OAUTH_TOKEN=notset
 
-COPY . .
+COPY . 
 
 RUN git describe --always --dirty --tags | tee VERSION
 RUN gem install bundler -v '<2'
